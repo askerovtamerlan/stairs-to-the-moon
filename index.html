@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            height: 100%;
+
+        }
+
+        body {
+            /* height: 100%; */
+            /* height: 80; */
+            /* width: 100vh; */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            /* height: 100%; */
+            /* color: #6363d6; */
+            background-image: url("/rectangle.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center center; */
+            /* background-size: 50%; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .jumbotron {
+            width: 80%;
+            height: 80%;
+            /* margin: 0 auto; */
+
+            /* align-content: center; */
+            background-image: url("/rectangle.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .t-container {
+            position: absolute;
+            /* margin: auto 0; */
+            font-size: 8rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+            font-weight: 900;
+
+            letter-spacing: 1rem;
+
+            color: rgba(128, 128, 128, 0.222);
+
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="t-container">
+        <p>PIDER</p>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="jumbotron">
+                <div class="jumbotron">
+                    <div class="jumbotron">
+                        <div class="jumbotron">
+                            <div class="jumbotron">
+                                <div class="jumbotron">
+                                    <div class="jumbotron">
+                                        <div class="jumbotron">
+                                            <div class="jumbotron">
+                                                <div class="jumbotron">
+                                                    <div class="jumbotron">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./anime.min.js"></script>
+
+    <script>
+        const bodyElement = document.querySelector('body')
+
+        console.log(window.visualViewport.height)
+
+        let heightViewport = window.visualViewport.height
+
+        bodyElement.style.height = heightViewport
+        bodyElement.style.backgroundImage = "url('/rectangle.svg')"
+        bodyElement.style.backgroundColor = 'pink'
+
+
+        anime({
+            targets: '.jumbotron',
+            translateX: [-5, 5],
+            translateY: [-2, 2],
+            delay: anime.stagger(100),
+            easing: 'easeInOutQuad',
+            loop: true,
+            direction: 'alternate',
+            duration: 20000 // increase delay by 100ms for each elements.
+        });
+
+        // anime({
+        //     targets: '.jumbotron',
+        //     translateY: {
+        //         value: [0, 5, 0],
+        //         duration: 1000,
+        //     },
+        //     translateX: {
+        //         value: [-5, 5],
+        //         duration: 10000,
+        //    },
+        //     delay: anime.stagger(100),
+        //     easing: 'easeInOutQuad',
+        //     loop: true,
+        //     direction: 'alternate'
+        // })
+
+    </script>
+</body>
+
+
+</html>
